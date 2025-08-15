@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Script Audit (async/defer) — panel + włącz/wyłącz
+// @name         Script Audit (async/defer) - panel + włącz/wyłącz
 // @namespace    https://seekio.pl
 // @version      1.0.0
-// @description  Podgląd wszystkich <script> na stronie (src, async, defer, module, rozmiar, czas). Panel + przycisk + globalne Włącz/Wyłącz.
-// @author       pcharchan // (Możesz tu zostawić swój nick)
+// @description  Podgląd wszystkich <script> na stronie (src, async, defer, module, rozmiar, czas). Panel + przycisk + globalne Włącz/Wyłącz
+// @author       pcharchan
 // @license      MIT
 // @match        http*://*/*
 // @run-at       document-idle
