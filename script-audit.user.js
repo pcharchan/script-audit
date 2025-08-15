@@ -3,6 +3,8 @@
 // @namespace    https://seekio.pl
 // @version      1.0.0
 // @description  Podgląd wszystkich <script> na stronie (src, async, defer, module, rozmiar, czas). Panel + przycisk + globalne Włącz/Wyłącz.
+// @author       pcharchan // (Możesz tu zostawić swój nick)
+// @license      MIT
 // @match        http*://*/*
 // @run-at       document-idle
 // @grant        GM_registerMenuCommand
@@ -10,11 +12,8 @@
 // @grant        GM_setValue
 // @grant        GM_addStyle
 // @grant        GM_setClipboard
-// @updateURL    https://raw.githubusercontent.com/TWOJ-NICK/moje-userscripty/main/script-audit.user.js
-// @downloadURL  https://raw.githubusercontent.com/TWOJ-NICK/moje-userscripty/main/script-audit.user.js
-// Copyright (c) 2023 Twój Nick (https://seekio.pl)
-// Released under the MIT license
-// https://github.com/TWOJ-NICK/moje-userscripty/blob/main/LICENSE
+// @updateURL    https://raw.githubusercontent.com/pcharchan/script-audit/main/script-audit.user.js
+// @downloadURL  https://raw.githubusercontent.com/pcharchan/script-audit/main/script-audit.user.js
 // ==/UserScript==
 
 (() => {
@@ -99,7 +98,7 @@
 
   panel.querySelector('#sa-disable').addEventListener('click', () => {
     GM_setValue(KEY_ENABLED, false);
-    alert('Skrypt wyłączony. Użyj menu, aby ponownie włączyć.');
+    alert('Skrypt wyłączony. Użyj menu i włącz ponownie');
     panel.remove(); btn.remove();
   });
 
@@ -109,9 +108,9 @@
     try {
       if (typeof GM_setClipboard === 'function') GM_setClipboard(json, 'text');
       else if (navigator.clipboard) navigator.clipboard.writeText(json);
-      toast('Skopiowano JSON do schowka');
+      toast('JSON skopiowany do schowka');
     } catch {
-      alert('Nie udało się skopiować.');
+      alert('Nie udało się skopiować');
     }
   });
 
