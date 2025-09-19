@@ -3,6 +3,11 @@ Wszystkie istotne zmiany w tym projekcie będą dokumentowane w tym pliku.
 
 Format oparty jest na [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), a ten projekt stosuje [Semantyczne Wersjonowanie](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1]
+
+### Zmieniono
+- Czasami kolor tekstu na buttonach przyjmował style ze strony i zlewał się z tłem. Teraz kolor tekstu jest zawsze czarny
+
 ## [2.1.0]
 
 ### Zmieniono
