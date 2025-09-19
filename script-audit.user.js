@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Script Audit (async/defer) — v2.1
-// @namespace    https://seekio.pl
-// @version      2.1.0
+// @name         Script Audit (async/defer) - v2.1
+// @namespace    https://seekio.pl/blog/
+// @version      2.1.1
 // @description  Podgląd <script> na stronie (src, async, defer, rozmiar, czas). Ruchomy i skalowalny panel, sortowanie, kopiowanie JSON/CSV.
 // @author       pcharchan
 // @license      MIT
@@ -36,7 +36,7 @@
     #sa-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: #f6f7f9; border-bottom: 1px solid #e5e7eb; cursor: move; user-select: none; }
     #sa-header .title { font-weight: 600; }
     #sa-actions { display: flex; gap: 8px; }
-    #sa-actions button { border: 1px solid #d1d5db; background: #fff; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+    #sa-actions button { border: 1px solid #d1d5db; background: #fff; color: #000; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; }
     #sa-actions button:hover { background: #f3f4f6; }
     #sa-table-wrapper { flex-grow: 1; overflow: auto; }
     #sa-table { width: 100%; border-collapse: collapse; font: 12px/1.4 ui-monospace, Menlo, Consolas, monospace; }
@@ -294,8 +294,6 @@
   };
 
   const makeResizable = (el) => {
-      // Wykorzystuje resize: both; i overflow: hidden;, aby uzyskać uchwyt podobny do natywnego.
-      // To jest prostsze i bardziej niezawodne niż ręczne tworzenie div.
   };
 
   const makeColsResizable = (table) => {
@@ -307,7 +305,7 @@
           header.appendChild(resizer);
 
           resizer.addEventListener('mousedown', (e) => {
-              e.stopPropagation(); // prevent sorting
+              e.stopPropagation();
               const startX = e.clientX;
               const startWidth = header.offsetWidth;
               const colIndex = [...header.parentElement.children].indexOf(header);
